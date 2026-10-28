@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0B2A63;
+}
+
+svg {
+  width: 400px;
+}
+
+.short { fill: #FF9A5C; }
+.long  { fill: #F0476B; }
+.vein  { fill: #FFD3C2; }
+.short, .long {
+  transform-box: view-box;
+  transform-origin: 190px 190px;
+}
+
+.long {
+  animation: spin 12s linear infinite;
+}
+
+.short {
+  animation: spin 12s linear infinite reverse;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.ring-dots, .orbit {
+  transform-box: view-box;
+  transform-origin: 190px 190px;
+}
+
+.ring-dots {
+  animation: spin 30s linear infinite reverse;
+}
+
+.orbit {
+  animation: spin 20s linear infinite;
+}
